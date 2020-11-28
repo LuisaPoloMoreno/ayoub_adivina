@@ -1,3 +1,4 @@
+//Corregido por Luisa
 package ayoub_adivino;
 
 // Ayoub Hiar
@@ -15,7 +16,8 @@ public class Ayoub_Adivino {
         int min = 10;
         Random rand = new Random();
         int randomNum = rand.nextInt((max - min) + 1) + min;
-        //System.out.print(x);
+        //System.out.print(x);    //Luisa: Quice utilizar ésta línea pero no me sirvió porque sigue llamandose "x" en vez de "randomNum"
+        //System.out.print(randomNum);	  //Luisa: es algo sin mucha importancia pero así ya lo tienes corregido. 
         Scanner sc = new Scanner(System.in);
         do {
             System.out.print("\nIntroduce el valor de X: ");
@@ -28,7 +30,15 @@ public class Ayoub_Adivino {
             cont++;
         } while (n != randomNum);
         System.out.print("Exelente!!! Haz acertado , No. de intentos: "+cont );
-        sc.close();   
+        sc.close();  
+        
+        
+        /*for(int i=1 ; i<=100; i++)  // ésto es lo que he usado para comprobar que el rango de los números aleatorios es correcto
+        {
+        	int randomNum = rand.nextInt((max - min) + 1) + min;
+        	System.out.println(randomNum);
+        } */
+        
     }
     
 }
